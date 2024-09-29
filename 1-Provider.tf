@@ -1,7 +1,7 @@
 # https://www.terraform.io/language/settings/backends/gcs
 terraform {
   backend "gcs" {
-    bucket = "black-mesa-gke-bucket"
+    bucket = "black-mesa-west-gke-bucket"
     prefix = "terraform/state"
   }
   required_providers {
@@ -14,6 +14,6 @@ terraform {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs
 provider "google" {
-  project = "black-mesa-gke-research"
+  project = "black-mesa-west-gke-research"
   region  = "us-central1"
 }

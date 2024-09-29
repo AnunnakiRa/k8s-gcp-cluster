@@ -29,7 +29,7 @@ resource "google_container_cluster" "primary" {
   }
 
   workload_identity_config {
-    workload_pool = "black-mesa-gke-research.svc.id.goog"
+    workload_pool = "black-mesa-west-gke-research.svc.id.goog"
   }
 
   ip_allocation_policy {

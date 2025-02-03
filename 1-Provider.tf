@@ -1,7 +1,7 @@
 # https://www.terraform.io/language/settings/backends/gcs
 terraform {
   backend "gcs" {
-    bucket = "black-mesa-west-gke-bucket"
+    bucket = "friendly-aurora-bucket"
     prefix = "terraform/state"
   }
   required_providers {
@@ -14,6 +14,6 @@ terraform {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs
 provider "google" {
-  project = "black-mesa-west-gke-research"
+  project = "friendly-aurora-447303-m9"
   region  = "us-central1"
 }

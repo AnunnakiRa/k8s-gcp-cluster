@@ -9,7 +9,7 @@ resource "google_service_account" "service-a" {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam
 resource "google_project_iam_member" "service-a" {
-  project = "black-mesa-west-gke-research"
+  project = "friendly-aurora-447303-m9"
   role    = "roles/storage.admin"
   member  = "serviceAccount:${google_service_account.service-a.email}"
 
@@ -22,7 +22,7 @@ resource "google_project_iam_member" "service-a" {
 resource "google_service_account_iam_member" "service-a" {
   service_account_id = google_service_account.service-a.id
   role               = "roles/iam.workloadIdentityUser"
-  member             = "serviceAccount:black-mesa-west-gke-research.svc.id.goog[staging/service-a]"
+  member             = "serviceAccount:friendly-aurora-447303-m9.svc.id.goog[staging/service-a]"
 
   lifecycle {
     create_before_destroy = true
